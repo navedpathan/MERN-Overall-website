@@ -1,0 +1,54 @@
+.navbar{
+    background-color: #70c4ff;
+    height: 10vh;
+}
+
+.navbar-brand img{
+    width: 100px;
+    height: 100px;
+}
+
+.signup-img img, .login-img img{
+    width: 400px;
+    height: 400px;
+}
+
+.control{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    width: 25vw;
+}
+
+form{
+    margin: 3%;
+}
+
+h6, h4, .home-text{
+    text-align: center;
+    position: absolute;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: capitalize;
+}
+
+h6{
+    color: rgb(0, 102, 212);
+}
+
+h4{
+    margin-top: 6.5rem;
+}
+
+.home-text{
+    margin-top: 3rem;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.home-page{
+    background: -webkit-linear-gradient(left, #0084ff, #c2e5ff);
+    width: 50vw;
+    height: 90vh;
+}
