@@ -118,10 +118,10 @@ router.post('/signin', async (req, res) => {
 
 // about us page
 
-router.get('/about', authenticate, (req, res) => {
-    console.log(`Hello my About`);
-    res.send(req.rootUser);
-})
+// router.get('/about', authenticate, (req, res) => {
+//     console.log(`Hello my About`);
+//     res.send(req.rootUser);
+// })
 
 // get user data for contact us & home page
 
