@@ -21,10 +21,10 @@ const PORT = process.env.PORT || 5000;
 //     next();
 // }
 
-app.get('/about', (req, res) => {
-    console.log(`Hello my About`);
-    res.send(`Hello About world from server`);
-})
+// app.get('/about', (req, res) => {
+//     console.log(`Hello my About`);
+//     res.send(`Hello About world from server`);
+// })
 
 app.get('/contact', (req, res) => {
     // res.cookie("Test", 'thapa')
