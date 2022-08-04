@@ -21,19 +21,19 @@ const PORT = process.env.PORT || 5000;
 //     next();
 // }
 
-// app.get('/about', middleware, (req, res) => {
-//     console.log(`Hello my About`);
-//     res.send(`Hello About world from server`);
-// })
+app.get('/about', (req, res) => {
+    console.log(`Hello my About`);
+    res.send(`Hello About world from server`);
+})
 
-// app.get('/contact', (req, res) => {
-//     // res.cookie("Test", 'thapa')
-//     res.send(`Hello Contact world from server`);
-// })
+app.get('/contact', (req, res) => {
+    // res.cookie("Test", 'thapa')
+    res.send(`Hello Contact world from server`);
+})
 
-// app.get('/signin', (req, res) => {
-//     res.send(`Hello Login world from server`);
-// })
+app.get('/login', (req, res) => {
+    res.send(`Hello Login world from server`);
+})
 
 app.get('/signup', (req, res) => {
     res.send(`Hello Registration world from server`);
