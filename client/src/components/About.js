@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import '../css/About.css';
 import profile from '../images/profile.jpg';
 import profile2 from '../images/profile2.jpg';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../App';
+
 
 const About = () => {
+  const { state, dispatch } = useContext(UserContext);
 
   const history = useHistory();
 
@@ -23,12 +26,14 @@ const About = () => {
       });
 
       const data = await res.json();
+      dispatch({ type: "USER", payload: true });
+      
       console.log(data);
       setUserData(data);
-
+      
       if (!res.status == 200) {
-        const error = new Error(res.error);
-        throw error;
+        const err = new Error(res.err);
+        throw err;
       }
     }
     catch (err) {
@@ -97,14 +102,14 @@ const About = () => {
             <div className="col-md-8">
               <div className="tab-content profile-tab" id="myTabContent">
                 <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-md-6">
                       <label>User ID</label>
                     </div>
                     <div className="col-md-6">
-                      <p>Sheena123</p>
+                      <p>{ userData.id }</p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row">
                     <div className="col-md-6">
                       <label>Name</label>

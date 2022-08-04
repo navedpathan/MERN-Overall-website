@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from "react-router-dom";
-import signpic from '../images/signpic.png'
+import signpic from '../images/signpic.png';
 
 const SignUp = () => {
 

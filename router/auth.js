@@ -127,7 +127,7 @@ router.get('/about', authenticate, (req, res) => {
     res.send(req.rootUser);
 })
 
-// get user data for home page
+// get user data for contact us & home page
 
 router.get('/getdata', authenticate, (req, res) => {
     console.log(`Hello my Homepage`);
@@ -141,6 +141,7 @@ router.post('/contact', authenticate, async (req, res) => {
         const { name, email, phone, message } = req.body;
 
         if ( !name || !email || !phone || !message ) {
+            console.log('error in contact form')
             return res.status(400).json({error: "please filled the contact form"});
         }
 

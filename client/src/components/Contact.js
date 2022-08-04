@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import '../css/Contact.css'
+import React, { useEffect, useState, useContext } from 'react'
+import '../css/Contact.css';
+import { UserContext } from '../App';
+
 
 const Contact = () => {
+    const { state, dispatch } = useContext(UserContext);
 
   const [userData, setUserData] = useState({name:"", email:"", phone:"", message:""});
 
@@ -16,12 +19,14 @@ const Contact = () => {
       });
 
       const data = await res.json();
+      dispatch({ type: "USER", payload: true });
+
       console.log(data);
       setUserData({ ...userData, name: data.name, email: data.email, phone: data.phone });
 
-      if (!res.status == 200) {
-        const error = new Error(res.error);
-        throw error;
+      if (res.status !== 200) {
+        const err = new Error(res.err);
+        throw err;
       }
     }
     catch (err) {
@@ -29,9 +34,9 @@ const Contact = () => {
     }
   }
 
-//   useEffect(() => {
+  useEffect(() => {
     userContact();
-//   }, []);
+  }, []);
 
 //   storing data in states
 

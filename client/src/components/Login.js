@@ -5,7 +5,7 @@ import { UserContext } from '../App';
 
 const Login = () => {
 
-  const { state, dispatch } = useContext(UserContext);
+  const { state, dispatch } = useContext(UserContext); 
 
   const history = useHistory();
 
@@ -31,7 +31,7 @@ const Login = () => {
       window.alert("Invalid Credientials");
     }
     else {
-      dispatch({type:"USER", payload:true});
+      dispatch({type:"USER", payload: true});
       window.alert("User Login Successfully");
       history.push("/");
     }

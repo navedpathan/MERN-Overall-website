@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import '../css/App.css'
+import React, { useEffect, useState, useContext } from 'react'
+import '../css/App.css';
+import { UserContext } from '../App';
+
 
 const Home = () => {
+  const { state, dispatch } = useContext(UserContext);
 
   const [username, setUsername] = useState('');
   const [show, setShow] = useState(false);
@@ -17,6 +20,8 @@ const Home = () => {
       });
 
       const data = await res.json();
+      dispatch({ type: "USER", payload: true });
+
       console.log(data);
       setUsername(data.name);
       setShow(true);
