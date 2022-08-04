@@ -26,18 +26,18 @@ const PORT = process.env.PORT || 5000;
 //     res.send(`Hello About world from server`);
 // })
 
-app.get('/contact', (req, res) => {
-    // res.cookie("Test", 'thapa')
-    res.send(`Hello Contact world from server`);
-})
+// app.get('/contact', (req, res) => {
+//     // res.cookie("Test", 'thapa')
+//     res.send(`Hello Contact world from server`);
+// })
 
-app.get('/login', (req, res) => {
-    res.send(`Hello Login world from server`);
-})
+// app.get('/login', (req, res) => {
+//     res.send(`Hello Login world from server`);
+// })
 
-app.get('/signup', (req, res) => {
-    res.send(`Hello Registration world from server`);
-})
+// app.get('/signup', (req, res) => {
+//     res.send(`Hello Registration world from server`);
+// })
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
