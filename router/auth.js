@@ -10,10 +10,6 @@ router.use(cookieParser());
 require('../db/conn');
 const User = require("../models/userSchema");
 
-router.get('/', (req, res) => {
-    res.send(`Hello world from server router.js`);
-});
-
 // Using Promises...
 
 // router.get('/register', (req, res) => {
