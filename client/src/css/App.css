@@ -3,14 +3,29 @@
     height: 10vh;
 }
 
+.nav-item {
+    color: red;
+}
+
 .navbar-brand img{
     width: 100px;
     height: 100px;
 }
 
+.navbar-toggler {
+    position: absolute;
+    right: 1rem;
+}
+
+.navbar-nav {
+    color: white;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
 .signup-img img, .login-img img{
     width: 400px;
-    height: 400px;
 }
 
 .control{
@@ -51,4 +66,14 @@ h4{
     background: -webkit-linear-gradient(left, #0084ff, #c2e5ff);
     width: 50vw;
     height: 90vh;
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-nav {
+        height: 100vh;
+        background-color: #70c4ff;
+        padding: 2rem;
+        right: -1rem;
+        top: -3rem;
+    }
 }

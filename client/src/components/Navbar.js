@@ -3,6 +3,7 @@ import '../css/App.css';
 import { NavLink } from 'react-router-dom';
 import logo from "../images/logo.png"
 import { UserContext } from '../App';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
 
@@ -59,7 +60,9 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </NavLink>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">
+            <MenuIcon />
+          </span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
